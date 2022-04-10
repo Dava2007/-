@@ -1,0 +1,130 @@
+print('Welcome to the calculator!\nPlease, to raed the manual:');
+print('Manual:\na+b - 1\na-b - 2\na*b - 3\na/b - 4\na^x - 5\nsqr(a) - 6\n(a+b)^2 - 7\n(a-b)^2 - 8\n(a+b)*(a-b) - 9\nTh.Пифагора - 10\nПлощади - 11\n(набор навыков будет увеличиваться)')
+
+Enter = input('Дайте команду: ')
+Enter1 = int(Enter)
+
+if Enter1 > 13 :
+    print('А если серьёзно?')
+#сумма
+if Enter1 == 1:
+
+    a = int(input('Введите a: '));
+    b = int(input('Введите b :'));
+
+    print('Результат: ', a+b)
+    #разность
+if Enter1 == 2:
+    
+    a = int(input('Введите a: '));
+    b = int(input('Введите b :'));
+
+    print('Результат: ', a-b)
+#умножение
+if Enter1 == 3:
+    
+    a = int(input('Введите a: '));
+    b = int(input('Введите b :'));
+
+    print('Результат: ', a*b)
+#деление
+if Enter1 == 4:
+    
+    a = float(input('Введите a: '));
+    b = float(input('Введите b :'));
+
+    print('Результат: ', a/b)
+#в степень
+if Enter1 == 5:
+    
+    a = int(input('Введите число: '));
+    b = int(input('В какую степень?'));
+
+    print('Результат: ', a**b)
+#корень квадратный
+if Enter1 == 6:
+    
+    a = int(input('Введите число: '));
+
+    print('Результат: ', a**0.5)
+#Фсу к.суммы
+if Enter1 == 7:
+    
+    a = int(input('Введите a: '));
+    b = int(input('Введите b :'));
+
+    print('Результат: ', (a+b)**2)
+#Фсу к.разности
+if Enter1 == 8:
+    
+    a = int(input('Введите a: '));
+    b = int(input('Введите b :'));
+
+    print('Результат: ', (a-b)**2)
+    #Разность квадратов
+if Enter1 == 9:
+    
+    a = int(input('Введите a: '));
+    b = int(input('Введите b :'));
+
+    print('Результат: ', (a-b)*(a+b))
+    #Пифагор
+if Enter1 == 10:
+    
+    pif = str(input('Что надо найти?: '))
+    #Проверка
+    if (pif != 'c') and (pif != 'a'):
+        print('Либо у тебя русская раскладка, либо ты прикалываешься')
+    #С
+    if pif == 'c':
+        a = int(input('Введите a: '))
+        b = int(input('Введите b: '))
+        print('Результат: ', ((a**2) + (b**2))**0.5)
+    #A
+    if pif == 'a':
+        b = int(input('Введите b: '))
+        c = int(input('Введите c: '))
+        print('Результат: ', ((c**2) - (b**2))**0.5)
+    #площади
+if Enter1 == 11:
+    Sx = int(input('Площадь какой фигуры надо найти?\nПрямоугольник - 1\nПаралелограмм - 2\nКвадрат - 3\nТреуголькник - 4\nТрапеция - 5\nРомб - 6\nЦифра: '))
+        #прямоугольник
+    if Sx == 1:
+        a = int(input('Введите a: '))
+        b = int(input('Введите b: '))
+        print('Результат: ', a*b)
+    #паралелограмм
+    if Sx == 2:
+        a = int(input('Введите a: '))
+        h = int(input('Введите h: '))
+        print('Результат: ', a*h)
+    #квадрат
+    if Sx == 3:
+        a = int(input('Введите a: '))
+        print('Результат: ', a**2)
+    #треугольник
+    if Sx == 4:
+        a = int(input('Введите a: '))
+        h = int(input('Введите h: '))
+        print('Результат: ', (a*h)/2)
+    #трапеция
+    if Sx == 5:
+        a = int(input('Введите a: '))
+        b = int(input('Введите b: '))
+        h = int(input('Введите h: '))
+        print('Результат: ', ((a+b)*h)/2)
+    #ромб
+    if Sx == 6:
+        d1 = int(input('Введите d1: '))
+        d2 = int(input('Введите d2: '))
+        print('Результат: ', (d1*d2)/2)
+#Квадртный трёхчлен
+if Enter1 == 12:
+    a = int(input('Введите коэффициент a: '))
+    b = int(input('Введите коэффициент b: '))
+    c = int(input('Введите коэффициент c: '))
+    D = (b**2 - 4*a*c)**0.5
+    x1 = (- b - D)/2*a
+    x2 = (- b + D)/2*a
+    print('Результат:\n(D = %s)\nX1 = %s\nX2 = %s' %(D, x1, x2))
+
